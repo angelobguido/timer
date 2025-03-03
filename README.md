@@ -5,9 +5,14 @@ Each timer can be reseted by making another request with the same timer id.
 The request needs to be a POST to "\reset-timer" request with a body like:
 ```
 {
-  id: [String]
-  time: [Number]
-  request: [Object]
+  "id": [String],
+  "time": [Number],
+  "request": {
+    "url": [String],
+    "method": [String],
+    "headers": [Map String String],
+    "body": [Object]
+  }
 }
 
 ```
